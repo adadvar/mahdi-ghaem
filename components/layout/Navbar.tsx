@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { BsSearch } from 'react-icons/bs';
 const Navbar = ({ className }: { className: string }) => {
   const navItemClass =
-    'border-b-2 py-3 border-b-transparent hover:border-[#E5E7E8] transition-colors';
+    'border-b-2 py-3 border-b-transparent hover:border-[#E5E7E8] duration-500 transition-colors';
   return (
     <header
       className={`${className} flex items-center justify-between px-[3rem] py-[2rem] text-[#E5E7E8]`}>
@@ -17,7 +17,7 @@ const Navbar = ({ className }: { className: string }) => {
           priority
           quality={50}
         />
-        <span className={`mb-6 text-[2.4rem] ${notoNastaliq.className}`}>مهدی موعود</span>
+        <span className={`mb-6 text-[2.4rem] ${notoNastaliq.className}`}>مهدی قائم</span>
       </Link>
       <nav className="">
         <ul className="flex items-center justify-between gap-[3.2rem] text-[1.6rem]">
@@ -35,7 +35,7 @@ const Navbar = ({ className }: { className: string }) => {
           </li>
         </ul>
       </nav>
-      <button className="">
+      <button className={`${navItemClass} cursor-pointer`}>
         <BsSearch className="h-[2.4rem] w-[2.4rem]" />
       </button>
     </header>

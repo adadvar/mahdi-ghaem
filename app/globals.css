@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer base {
   * {
@@ -10,4 +10,5 @@
 
 html {
   font-size: 62.5%;
+  line-height: 2;
 }
