@@ -1,12 +1,13 @@
-import Hero from "@/components/layout/Hero";
-import Navbar from "@/components/layout/Navbar";
+import Hero from '@/components/layout/Hero';
+import KnowledgeCards from '@/components/layout/KnowledgeCards';
 
 export default function Home() {
   return (
     <>
-      <Hero />
-
-      <Navbar className="absolute top-0 inset-x-0 " />
+      <main className="flex flex-col space-y-[3.2rem]">
+        <Hero />
+        <KnowledgeCards />
+      </main>
     </>
   );
 }

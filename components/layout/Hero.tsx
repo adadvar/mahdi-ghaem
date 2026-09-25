@@ -1,5 +1,6 @@
 import { notoNastaliq, quran } from '@/app/layout';
 import Image from 'next/image';
+import { BsArrowLeft } from 'react-icons/bs';
 
 const Hero = () => {
   return (
@@ -19,6 +20,10 @@ const Hero = () => {
           حضرت مهدی، فرزند امام حسن عسکری (ع)
         </span>
         <span className="self-start text-[1.4rem] text-[#E5E7E8]">دوازدهمین امام شیعیان</span>
+        <button className="group mt-5 flex items-center justify-center rounded-full bg-[#0E8F91] px-[2rem] py-[1rem] text-[1.4rem] text-[#E5E7E8] transition-colors hover:bg-[#2BA6A4]">
+          <span className="me-2">مطالعه را شروع کنید</span>
+          <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />
+        </button>
       </div>
     </section>
   );

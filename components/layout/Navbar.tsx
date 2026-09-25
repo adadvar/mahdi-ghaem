@@ -35,7 +35,7 @@ const Navbar = ({ className }: { className: string }) => {
           </li>
         </ul>
       </nav>
-      <button className={`${navItemClass} cursor-pointer`}>
+      <button className={`${navItemClass}`}>
         <BsSearch className="h-[2.4rem] w-[2.4rem]" />
       </button>
     </header>
