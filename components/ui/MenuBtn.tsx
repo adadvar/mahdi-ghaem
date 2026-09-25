@@ -11,7 +11,7 @@ const MenuBtn = () => {
       <button className="block sm:hidden" onClick={() => setOpen((prev: boolean) => !prev)}>
         <BsList className="h-[3rem] w-[3rem]" />
       </button>
-      {open && <Navbar className="" />}
+      {open && <Navbar className="" setOpen={setOpen} />}
     </>
   );
 };
