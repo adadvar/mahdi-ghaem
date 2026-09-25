@@ -1,4 +1,4 @@
-import { notoNastaliq, quran } from '@/app/layout';
+import { notoNastaliq, quran } from '@/app/fonts';
 import Image from 'next/image';
 import { BsArrowLeft } from 'react-icons/bs';
 

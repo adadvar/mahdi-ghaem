@@ -2,18 +2,7 @@ import type { Metadata } from 'next';
 import { Vazirmatn, Noto_Nastaliq_Urdu, Amiri_Quran } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
-
-const vazirmatn = Vazirmatn({
-  subsets: ['arabic']
-});
-
-export const notoNastaliq = Noto_Nastaliq_Urdu({
-  subsets: ['arabic'],
-  weight: ['400', '700'],
-  display: 'swap'
-});
-
-export const quran = Amiri_Quran({ weight: ['400'], subsets: ['arabic'] });
+import { vazirmatn } from './fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
