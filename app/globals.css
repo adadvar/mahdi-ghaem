@@ -16,3 +16,5 @@ html {
 button {
   cursor: pointer;
 }
+
+@custom-variant hover (&:hover);
