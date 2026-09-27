@@ -62,8 +62,8 @@ const KnowledgeCards = () => {
         برای شناخت بهتر، با بخش های مهم زندگی و دوران امام ایشان آشنا شوید.
       </p>
       <div className="flex items-center justify-between overflow-x-auto">
-        {items.map((item: Item) => (
-          <Card key={item.title} item={item} />
+        {items.map((item: Item, idx: number) => (
+          <Card key={idx} item={item} />
         ))}
       </div>
     </section>
