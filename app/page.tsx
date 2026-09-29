@@ -3,11 +3,9 @@ import KnowledgeCards from '@/components/layout/KnowledgeCards';
 
 export default function Home() {
   return (
-    <>
-      <main className="flex flex-col space-y-[3.2rem]">
-        <Hero />
-        <KnowledgeCards />
-      </main>
-    </>
+    <main className="flex min-w-0 flex-col gap-[3.2rem]">
+      <Hero />
+      <KnowledgeCards />
+    </main>
   );
 }

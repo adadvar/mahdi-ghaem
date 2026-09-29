@@ -1,5 +1,7 @@
-import { BsPersonCircle } from 'react-icons/bs';
-import { IconType } from 'react-icons';
+import { BsChevronRight, BsPersonCircle } from 'react-icons/bs';
+import type { IconType } from 'react-icons';
+import Link from 'next/link';
+import { lighten } from '@/lib/utils';
 
 interface Item {
   icon: IconType;
@@ -11,20 +13,30 @@ interface Item {
 const Card = ({ item }: { item: Item }) => {
   const Icon = item.icon;
   return (
-    <div className="flex h-[20rem] w-[20rem] flex-col items-center bg-white px-[1.2rem] py-[1.6rem] shadow-2xl">
+    <Link
+      href={`#`}
+      className="flex h-[25.6rem] w-[25.6rem] shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-md transition-colors hover:bg-gray-50">
       <span
-        className="h-[5rem] w-[5rem] rounded-full"
-        style={{ background: item.color, border: 'black' }}>
-        <Icon className="h-[2.4rem] w-[2.4rem] text-white" />
+        className="flex min-h-[6.4rem] w-[6.4rem] items-center justify-center rounded-full"
+        style={{
+          background: lighten(item.color, 0.6),
+          borderWidth: '1px',
+          borderStyle: 'solid',
+          borderColor: lighten(item.color, 0.4)
+        }}>
+        <Icon className="h-[3.2rem] w-[3.2rem]" style={{ color: item.color }} />
       </span>
-    </div>
+      <h3 className="text-[1.8rem] font-bold text-[#062A3A]">{item.title}</h3>
+      <p className="text-[1.6rem] text-[#6B7A80]">{item.subTitle}</p>
+      <BsChevronRight className="h-[2.4rem] w-[2.4rem]" />
+    </Link>
   );
 };
 
 const items: Item[] = [
   {
     icon: BsPersonCircle,
-    color: '#15b91e',
+    color: '#2BA6A4',
     title: 'ولادت و نسب',
     subTitle: 'از تولد تا آغاز امامت'
   },
@@ -52,16 +64,16 @@ const items: Item[] = [
     title: 'ولادت و نسب',
     subTitle: 'از تولد تا آغاز امامت'
   }
-] as const;
+];
 
 const KnowledgeCards = () => {
   return (
-    <section className="flex flex-col items-center px-[3rem]">
+    <section className="flex w-full min-w-0 flex-col items-center px-[3rem]">
       <h2 className="text-[3rem] font-bold text-[#172B36]">امام را بشناسیم</h2>
       <p className="text-[1.6rem] text-[#6B7A80]">
         برای شناخت بهتر، با بخش های مهم زندگی و دوران امام ایشان آشنا شوید.
       </p>
-      <div className="flex items-center justify-between overflow-x-auto">
+      <div className="my-[3.2rem] flex w-full gap-[2.4rem] overflow-x-auto">
         {items.map((item: Item, idx: number) => (
           <Card key={idx} item={item} />
         ))}
