@@ -12,7 +12,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="fa" dir="rtl" className={`${vazirmatn.className} antialiased`}>
       <body className="bg-[#F8F7F3]">
-        <Navbar className="absolute inset-x-0 top-0 z-10" />
+        <Navbar />
 
         {children}
       </body>
