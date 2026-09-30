@@ -1,7 +1,14 @@
-import { BsChevronRight, BsPersonCircle } from 'react-icons/bs';
+import {
+  BsChevronRight,
+  BsPerson,
+  BsHourglassSplit,
+  BsSunrise,
+  BsBook,
+  BsQuestionLg
+} from 'react-icons/bs';
 import type { IconType } from 'react-icons';
 import Link from 'next/link';
-import { lighten } from '@/lib/utils';
+import { faintBg } from '@/lib/utils';
 
 interface Item {
   icon: IconType;
@@ -19,10 +26,10 @@ const Card = ({ item }: { item: Item }) => {
       <span
         className="flex min-h-[6.4rem] w-[6.4rem] items-center justify-center rounded-full"
         style={{
-          background: lighten(item.color, 0.6),
+          background: faintBg(item.color),
           borderWidth: '1px',
           borderStyle: 'solid',
-          borderColor: lighten(item.color, 0.4)
+          borderColor: faintBg(item.color, { lightness: 0.8, saturation: 0.4 })
         }}>
         <Icon className="h-[3.2rem] w-[3.2rem]" style={{ color: item.color }} />
       </span>
@@ -35,45 +42,45 @@ const Card = ({ item }: { item: Item }) => {
 
 const items: Item[] = [
   {
-    icon: BsPersonCircle,
-    color: '#2BA6A4',
+    icon: BsPerson,
+    color: '#007451',
     title: 'ولادت و نسب',
     subTitle: 'از تولد تا آغاز امامت'
   },
   {
-    icon: BsPersonCircle,
-    color: '#15b91e',
-    title: 'ولادت و نسب',
-    subTitle: 'از تولد تا آغاز امامت'
+    icon: BsHourglassSplit,
+    color: '#5900ac',
+    title: 'غیبت',
+    subTitle: 'غیبت صغری و کبری'
   },
   {
-    icon: BsPersonCircle,
-    color: '#15b91e',
-    title: 'ولادت و نسب',
-    subTitle: 'از تولد تا آغاز امامت'
+    icon: BsSunrise,
+    color: '#e0ac00',
+    title: 'ظهور',
+    subTitle: 'نشانه و یاران'
   },
   {
-    icon: BsPersonCircle,
-    color: '#15b91e',
-    title: 'ولادت و نسب',
-    subTitle: 'از تولد تا آغاز امامت'
+    icon: BsBook,
+    color: '#001dc2',
+    title: 'احادیث',
+    subTitle: 'سخنان گهربار'
   },
   {
-    icon: BsPersonCircle,
-    color: '#15b91e',
-    title: 'ولادت و نسب',
-    subTitle: 'از تولد تا آغاز امامت'
+    icon: BsQuestionLg,
+    color: '#b91515',
+    title: 'پرسش‌های کوتاه',
+    subTitle: 'پاسخ به سوالات پرتکرار'
   }
 ];
 
 const KnowledgeCards = () => {
   return (
-    <section className="flex w-full min-w-0 flex-col items-center px-[3rem]">
+    <section className="px-[3rem] text-center">
       <h2 className="text-[3rem] font-bold text-[#172B36]">امام را بشناسیم</h2>
       <p className="text-[1.6rem] text-[#6B7A80]">
         برای شناخت بهتر، با بخش های مهم زندگی و دوران امام ایشان آشنا شوید.
       </p>
-      <div className="my-[3.2rem] flex w-full gap-[2.4rem] overflow-x-auto">
+      <div className="my-[3.2rem] flex gap-[2.4rem] overflow-x-auto">
         {items.map((item: Item, idx: number) => (
           <Card key={idx} item={item} />
         ))}
