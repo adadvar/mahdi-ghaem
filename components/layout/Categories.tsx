@@ -80,7 +80,7 @@ const Categories = () => {
       <p className="text-[1.6rem] text-[#6B7A80]">
         برای شناخت بهتر، با بخش های مهم زندگی و دوران امام ایشان آشنا شوید.
       </p>
-      <div className="mx-auto my-[3.2rem] flex gap-[2.4rem] overflow-x-auto">
+      <div className="my-[3.2rem] flex gap-[2.4rem] overflow-x-auto">
         {items.map((item: Item, idx: number) => (
           <Card key={idx} item={item} />
         ))}
