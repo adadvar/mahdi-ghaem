@@ -73,7 +73,7 @@ const items: Item[] = [
   }
 ];
 
-const KnowledgeCards = () => {
+const Categories = () => {
   return (
     <section className="px-[3rem] text-center">
       <h2 className="text-[3rem] font-bold text-[#172B36]">امام را بشناسیم</h2>
@@ -89,4 +89,4 @@ const KnowledgeCards = () => {
   );
 };
 
-export default KnowledgeCards;
+export default Categories;
