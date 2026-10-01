@@ -5,7 +5,14 @@ import { BsArrowLeft } from 'react-icons/bs';
 const Hero = () => {
   return (
     <section className="relative mx-auto flex h-[50rem] w-full">
-      <Image src={'/img/hero.png'} alt="پس زمینه" fill className="object-cover" priority />
+      <Image
+        src={'/img/hero.png'}
+        alt="پس زمینه"
+        quality={25}
+        fill
+        className="object-cover"
+        priority
+      />
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative flex flex-col items-center justify-center px-[3rem]">
         <span className={`${quran.className} text-[2.4rem] text-[#D6A84F]`}>
