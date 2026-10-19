@@ -1,74 +1,70 @@
 import Link from 'next/link';
 import { BsArrowLeft } from 'react-icons/bs';
+import art1 from '@/public/img/art1.png';
+import art2 from '@/public/img/art2.png';
+import art3 from '@/public/img/art3.png';
+import Image from 'next/image';
 
 interface Item {
   img: HTMLImageElement;
-  title: string;
-  color: string;
-  subTitle: string;
   tag: string;
+  tagColor: string;
+  title: string;
+  subTitle: string;
   date: string;
+  studyMin: string;
 }
 
-// const Card = ({ item }: { item: Item }) => {
-//   const Icon = item.icon;
-//   return (
-//     <Link
-//       href={`#`}
-//       className="flex h-[25.6rem] w-[25.6rem] shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-md transition-colors hover:bg-gray-50">
-//       <span
-//         className="flex min-h-[6.4rem] w-[6.4rem] items-center justify-center rounded-full"
-//         style={{
-//           background: faintBg(item.color),
-//           borderWidth: '1px',
-//           borderStyle: 'solid',
-//           borderColor: faintBg(item.color, { lightness: 0.8, saturation: 0.4 })
-//         }}>
-//         <Icon className="h-[3.2rem] w-[3.2rem]" style={{ color: item.color }} />
-//       </span>
-//       <h3 className="text-[1.8rem] font-bold text-[#062A3A]">{item.title}</h3>
-//       <p className="text-[1.6rem] text-[#6B7A80]">{item.subTitle}</p>
-//       <BsChevronRight className="h-[2.4rem] w-[2.4rem]" />
-//     </Link>
-//   );
-// };
+const Card = ({ item }: { item: Item }) => {
+  const Icon = item.img;
+  return (
+    <Link
+      href={`#`}
+      className="flex h-[40rem] flex-1 shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-md transition-colors hover:bg-gray-50">
+      <Image src={item.img} alt={item.title} height={10} />
+      <h3 className="text-[1.8rem] font-bold text-[#062A3A]">{item.title}</h3>
+      <p className="text-[1.6rem] text-[#6B7A80]">{item.subTitle}</p>
+      <div className="flex items-center justify-between">
+        <span className="text-[1.2rem] text-[#6B7A80]">{item.date}</span>
+        <span className="text-[1.2rem] text-[#6B7A80]">{item.studyMin}</span>
+      </div>
+    </Link>
+  );
+};
 
-// const items: Item[] = [
-//   {
-//     icon: BsPerson,
-//     color: '#007451',
-//     title: 'ولادت و نسب',
-//     subTitle: 'از تولد تا آغاز امامت'
-//   },
-//   {
-//     icon: BsHourglassSplit,
-//     color: '#5900ac',
-//     title: 'غیبت',
-//     subTitle: 'غیبت صغری و کبری'
-//   },
-//   {
-//     icon: BsSunrise,
-//     color: '#e0ac00',
-//     title: 'ظهور',
-//     subTitle: 'نشانه و یاران'
-//   },
-//   {
-//     icon: BsBook,
-//     color: '#001dc2',
-//     title: 'احادیث',
-//     subTitle: 'سخنان گهربار'
-//   },
-//   {
-//     icon: BsQuestionLg,
-//     color: '#b91515',
-//     title: 'پرسش‌های کوتاه',
-//     subTitle: 'پاسخ به سوالات پرتکرار'
-//   }
-// ];
+const items: Item[] = [
+  {
+    img: art1,
+    tag: 'امامت',
+    tagColor: '#007451',
+    title: 'ولادت و نسب',
+    subTitle: 'از تولد تا آغاز امامت',
+    date: '30 آبان 1403',
+    studyMin: '5'
+  },
+  {
+    img: art1,
+    tag: 'امامت',
+    tagColor: '#007451',
+    title: 'ولادت و نسب',
+    subTitle: 'از تولد تا آغاز امامت',
+    date: '30 آبان 1403',
+    studyMin: '5'
+  },
+  {
+    img: art1,
+    tag: 'امامت',
+    tagColor: '#007451',
+    title: 'ولادت و نسب',
+    subTitle: 'از تولد تا آغاز امامت',
+    date: '30 آبان 1403',
+    studyMin: '5'
+  }
+];
 
 const LatestArticles = () => {
   return (
-    <section className="bg-white py-[2.4rem] shadow">
+    <section className="mx-auto max-w-[144rem] bg-white py-[2.4rem] shadow">
       <div className="mx-auto flex max-w-[144rem] items-center justify-between px-[3rem]">
         <div className="">
           <h2 className="text-[3rem] font-bold text-[#172B36]">آخرین مطالب</h2>
@@ -82,6 +78,11 @@ const LatestArticles = () => {
           <span className="me-2">مشاهده همه</span>
           <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />
         </Link>
+      </div>
+      <div className="my-[3.2rem] flex w-full gap-[2.4rem] overflow-x-auto px-[3rem]">
+        {items.map((item: Item, idx: number) => (
+          <Card key={idx} item={item} />
+        ))}
       </div>
     </section>
   );
