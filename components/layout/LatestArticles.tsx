@@ -4,6 +4,7 @@ import art1 from '@/public/img/art1.png';
 import art2 from '@/public/img/art2.png';
 import art3 from '@/public/img/art3.png';
 import Image from 'next/image';
+import { en2fa } from '@/lib/utils';
 
 interface Item {
   img: HTMLImageElement;
@@ -20,13 +21,13 @@ const Card = ({ item }: { item: Item }) => {
   return (
     <Link
       href={`#`}
-      className="flex h-[40rem] flex-1 shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-md transition-colors hover:bg-gray-50">
-      <Image src={item.img} alt={item.title} height={10} />
-      <h3 className="text-[1.8rem] font-bold text-[#062A3A]">{item.title}</h3>
+      className="flex h-[40rem] flex-1 shrink-0 flex-col items-center justify-between gap-[1.2rem] overflow-hidden rounded-[1rem] border border-[#E5E7E8] bg-white pb-[1.6rem] shadow-md transition-all duration-500 hover:translate-y-2 hover:bg-gray-50">
+      <Image src={item.img} height={500} className="object-cover" alt={item.title} />
+      <h3 className="px-[1.2rem] text-[1.8rem] font-bold text-[#062A3A]">{item.title}</h3>
       <p className="text-[1.6rem] text-[#6B7A80]">{item.subTitle}</p>
-      <div className="flex items-center justify-between">
-        <span className="text-[1.2rem] text-[#6B7A80]">{item.date}</span>
-        <span className="text-[1.2rem] text-[#6B7A80]">{item.studyMin}</span>
+      <div className="flex w-full items-center justify-between px-[1.2rem]">
+        <span className="text-[1.2rem] text-[#6B7A80]">{en2fa(item.date)}</span>
+        <span className="text-[1.2rem] text-[#6B7A80]">{`${en2fa(item.studyMin)} دقیقه مطالعه`}</span>
       </div>
     </Link>
   );

@@ -53,3 +53,17 @@ export function faintBg(hex: string, { saturation = 0.4, lightness = 0.85 } = {}
   const { h, s } = hexToHsl(hex);
   return hslToHex(h, s * saturation, lightness);
 }
+
+// Convert English digits to Persian digits
+export const en2fa = (value: string | number | null | undefined): string => {
+  if (value === null || value === undefined) return '';
+  return String(value).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[Number(d)]);
+};
+
+// Convert Persian/Arabic digits to English digits
+export const fa2en = (value: string | number | null | undefined): string => {
+  if (value === null || value === undefined) return '';
+  return String(value)
+    .replace(/[۰-۹]/g, (d) => String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d)))
+    .replace(/[٠-٩]/g, (d) => String('٠١٢٣٤٥٦٧٨٩'.indexOf(d)));
+};
