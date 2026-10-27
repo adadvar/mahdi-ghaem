@@ -1,6 +1,7 @@
 import Hero from '@/components/layout/Hero';
 import Categories from '@/components/layout/Categories';
 import LatestArticles from '@/components/layout/LatestArticles';
+import Hadith from '@/components/layout/Hadith';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Categories />
       <LatestArticles />
+      <Hadith />
     </main>
   );
 }
