@@ -2,6 +2,7 @@ import Hero from '@/components/layout/Hero';
 import Categories from '@/components/layout/Categories';
 import LatestArticles from '@/components/layout/LatestArticles';
 import Hadith from '@/components/layout/Hadith';
+import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Categories />
       <LatestArticles />
       <Hadith />
+      <Footer />
     </main>
   );
 }
