@@ -7,7 +7,8 @@ const Hadith = () => {
       {/* 1. IMAGE LAYER */}
       <div className="absolute inset-0 px-[3rem]">
         <div className="relative h-full w-full overflow-hidden rounded-[1rem]">
-          <Image src="/img/msg.jpg" alt="حدیث" fill className="object-cover" />
+          <Image src="/img/msg.jpg" alt="حدیث" fill className="object-cover sm:block" />
+          <Image src="/img/msg2.jpg" alt="حدیث" fill className="object-cover sm:hidden" />
         </div>
       </div>
 
