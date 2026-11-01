@@ -82,7 +82,7 @@ const items: Item[] = [
 
 const LatestArticles = () => {
   return (
-    <section className="mx-auto max-w-[144rem] bg-white py-[2.4rem] shadow">
+    <section className="mx-auto max-w-[144rem] bg-white py-[2.4rem]">
       <div className="mx-auto flex flex-col items-center justify-center px-[3rem] sm:flex-row sm:justify-between">
         <div>
           <h2 className="text-center text-[3rem] font-bold text-[#172B36] sm:text-start">
@@ -99,7 +99,7 @@ const LatestArticles = () => {
           <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />
         </Link>
       </div>
-      <div className="scrollbar-hover my-[3.2rem] flex w-full gap-[2.4rem] overflow-x-auto px-[3rem]">
+      <div className="scrollbar-hover my-[3.2rem] flex w-full gap-[2.4rem] overflow-x-auto px-[3rem] pb-6">
         {items.map((item: Item) => (
           <Card key={item.title} item={item} />
         ))}
