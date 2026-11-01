@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './tailwindConfig.css';
 
 @layer base {
   * {
@@ -11,6 +12,7 @@
 html {
   font-size: 62.5%;
   line-height: 2;
+  font-weight: 300;
 }
 
 body {
