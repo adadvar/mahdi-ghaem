@@ -4,6 +4,9 @@ import Logo from '../ui/Logo';
 const Footer = () => {
   const navItemClass =
     'inline-block border-b-1 rounded-sm w-fit font-light border-b-transparent hover:border-[#E5E7E8] duration-500 transition-colors';
+  const year = new Intl.DateTimeFormat('fa-IR', {
+    year: 'numeric'
+  }).format(new Date());
 
   return (
     <section className="space-y-10 bg-[#031C29] py-[2.4rem] text-[1.6rem] text-[#E5E7E8]">
@@ -48,6 +51,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-[1px] w-full max-w-[144rem] bg-gradient-to-r from-transparent via-[#0E8F91] to-transparent" />
+      <div className="max-w-[144rem] px-[3rem]">
+        <p className=""> &copy;{` ${year} - مهدی قائم، همه حقوق محفوظ است.`}</p>
+      </div>
     </section>
   );
 };

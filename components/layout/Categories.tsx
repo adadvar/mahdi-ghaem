@@ -19,6 +19,7 @@ interface Item {
 
 const Card = ({ item }: { item: Item }) => {
   const Icon = item.icon;
+
   return (
     <Link
       href={`#`}
