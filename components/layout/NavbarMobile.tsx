@@ -1,8 +1,7 @@
-import { notoNastaliq } from '@/app/fonts';
-import Image from 'next/image';
 import Link from 'next/link';
 import SearchBtn from '../ui/SearchBtn';
 import { BsX } from 'react-icons/bs';
+import Logo from '../ui/Logo';
 const Navbar = ({
   className = '',
   setOpen
@@ -18,17 +17,7 @@ const Navbar = ({
       <button className="absolute top-15 left-10" onClick={() => setOpen(false)}>
         <BsX className="h-[3rem] w-[3rem]" />
       </button>
-      <Link href={'/'} className="mb-5 flex items-center gap-2">
-        <Image
-          src={'/apple-touch-icon.png'}
-          alt="لوگو امام مهدی"
-          width={50}
-          height={50}
-          priority
-          quality={50}
-        />
-        <span className={`mb-6 text-[3rem] ${notoNastaliq.className}`}>مهدی قائم</span>
-      </Link>
+      <Logo />
       <nav className="">
         <ul className="flex flex-col items-center justify-between gap-[3.2rem] text-[1.6rem]">
           <li className={navItemClass}>
