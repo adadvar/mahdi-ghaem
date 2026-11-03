@@ -6,12 +6,14 @@ import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
-    <main className="space-y-[3.2rem]">
-      <Hero />
-      <Categories />
-      <LatestArticles />
-      <Hadith />
+    <>
+      <main className="space-y-[3.2rem]">
+        <Hero />
+        <Categories />
+        <LatestArticles />
+        <Hadith />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

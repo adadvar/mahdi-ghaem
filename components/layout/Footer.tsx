@@ -3,13 +3,13 @@ import Logo from '../ui/Logo';
 
 const Footer = () => {
   const navItemClass =
-    'inline-block border-b-1 rounded-sm w-fit font-light border-b-transparent hover:border-[#E5E7E8] duration-500 transition-colors';
+    'inline-block border-b rounded-sm w-fit font-light border-b-transparent hover:border-[#E5E7E8] duration-500 transition-colors';
   const year = new Intl.DateTimeFormat('fa-IR', {
     year: 'numeric'
   }).format(new Date());
 
   return (
-    <section className="space-y-10 bg-[#031C29] py-[2.4rem] text-[1.6rem] text-[#E5E7E8]">
+    <section className="mt-[3.2rem] space-y-10 bg-[#031C29] py-[2.4rem] text-[1.6rem] text-[#E5E7E8]">
       <div className="xs:grid-cols-2 mx-auto grid max-w-[144rem] grid-cols-1 gap-[4.8rem] px-[3rem] lg:grid-cols-5">
         <div className="xs:col-span-2 space-y-4">
           <Logo />
@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="space-y-4">
           <h3 className="font-bold text-[#0E8F91]">دسترسی سریع</h3>
-          <ul className="flex flex-col justify-between">
+          <ul className="flex flex-col gap-2">
             <li className={navItemClass}>
               <Link href={'#'}>خانه</Link>
             </li>
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="space-y-4">
           <h3 className="font-bold text-[#0E8F91]">لینک‌های مفید</h3>
-          <ul className="flex flex-col justify-between">
+          <ul className="flex flex-col gap-2">
             <li className={navItemClass}>
               <Link href={'#'}>مؤسسه‌های معتبر</Link>
             </li>

@@ -8,13 +8,14 @@ const Hero = () => {
       <Image
         src={'/img/hero.png'}
         alt="پس زمینه"
-        quality={25}
+        quality={75}
         fill
         className="object-cover"
+        sizes="100vw"
         priority
       />
       <div className="absolute inset-0 bg-black/40" />
-      <div className="relative flex flex-col items-center justify-center px-[3rem]">
+      <div className="relative flex w-full flex-col items-center justify-center px-[3rem] sm:max-w-[40rem]">
         <span className={`${quran.className} text-[2.4rem] text-[#D6A84F]`}>
           السَّلامُ عَلَيْكَ يَا بَقِيَّةَ اللَّه
         </span>
@@ -26,7 +27,7 @@ const Hero = () => {
         <span className="mt-10 text-[1.6rem] text-[#E5E7E8]">
           حضرت مهدی، فرزند امام حسن عسکری (ع)
         </span>
-        <span className="self-start text-[1.4rem] text-[#E5E7E8]">دوازدهمین امام شیعیان</span>
+        <span className="text-[1.4rem] text-[#E5E7E8]">دوازدهمین امام شیعیان</span>
         <button className="group mt-5 flex items-center justify-center rounded-full bg-[#0E8F91] px-[2rem] py-[1rem] text-[1.4rem] text-[#E5E7E8] transition-colors hover:bg-[#2BA6A4]">
           <span className="me-2">مطالعه را شروع کنید</span>
           <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />

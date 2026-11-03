@@ -23,7 +23,7 @@ const Card = ({ item }: { item: Item }) => {
   return (
     <Link
       href={`#`}
-      className="flex h-[25.6rem] w-[25.6rem] shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-md transition-colors hover:bg-gray-50">
+      className="flex h-[25.6rem] w-[25.6rem] shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <span
         className="flex min-h-[6.4rem] w-[6.4rem] items-center justify-center rounded-full"
         style={{
@@ -81,9 +81,9 @@ const Categories = () => {
       <p className="text-[1.6rem] text-[#6B7A80]">
         برای شناخت بهتر، با بخش های مهم زندگی و دوران امام ایشان آشنا شوید.
       </p>
-      <div className="scrollbar-hover my-[3.2rem] flex gap-[2.4rem] overflow-x-auto px-2 pb-6">
-        {items.map((item: Item, idx: number) => (
-          <Card key={idx} item={item} />
+      <div className="scrollbar-hover my-[3.2rem] flex gap-[2.4rem] overflow-x-auto px-2 pt-2 pb-6">
+        {items.map((item: Item) => (
+          <Card key={item.title} item={item} />
         ))}
       </div>
     </section>
