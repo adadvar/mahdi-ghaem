@@ -23,7 +23,7 @@ const Card = ({ item }: { item: Item }) => {
   return (
     <Link
       href={`#`}
-      className="flex h-[25.6rem] w-[25.6rem] shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border border-[#E5E7E8] bg-white px-[1.2rem] py-[1.6rem] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+      className="border-border flex h-[25.6rem] w-[25.6rem] shrink-0 flex-col items-center justify-center gap-[1.2rem] rounded-[1rem] border bg-white px-[1.2rem] py-[1.6rem] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <span
         className="flex min-h-[6.4rem] w-[6.4rem] items-center justify-center rounded-full"
         style={{
@@ -34,8 +34,8 @@ const Card = ({ item }: { item: Item }) => {
         }}>
         <Icon className="h-[3.2rem] w-[3.2rem]" style={{ color: item.color }} />
       </span>
-      <h3 className="text-[1.8rem] font-bold text-[#062A3A]">{item.title}</h3>
-      <p className="text-[1.6rem] text-[#6B7A80]">{item.subTitle}</p>
+      <h3 className="text-primary-900 text-[1.8rem] font-bold">{item.title}</h3>
+      <p className="text-muted text-[1.6rem]">{item.subTitle}</p>
       <BsChevronRight className="h-[2.4rem] w-[2.4rem]" />
     </Link>
   );
@@ -77,8 +77,8 @@ const items: Item[] = [
 const Categories = () => {
   return (
     <section className="mx-auto max-w-[144rem] px-[3rem] text-center">
-      <h2 className="text-[3rem] font-bold text-[#172B36]">امام را بشناسیم</h2>
-      <p className="text-[1.6rem] text-[#6B7A80]">
+      <h2 className="text-primary-800 text-[3rem] font-bold">امام را بشناسیم</h2>
+      <p className="text-muted text-[1.6rem]">
         برای شناخت بهتر، با بخش های مهم زندگی و دوران امام ایشان آشنا شوید.
       </p>
       <div className="scrollbar-hover my-[3.2rem] flex gap-[2.4rem] overflow-x-auto px-2 pt-2 pb-6">

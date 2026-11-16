@@ -3,20 +3,20 @@ import Logo from '../ui/Logo';
 
 const Footer = () => {
   const navItemClass =
-    'inline-block border-b rounded-sm w-fit font-light border-b-transparent hover:border-[#E5E7E8] duration-500 transition-colors';
+    'inline-block border-b rounded-sm w-fit font-light border-b-transparent hover:border-[var(--color-border)] duration-500 transition-colors';
   const year = new Intl.DateTimeFormat('fa-IR', {
     year: 'numeric'
   }).format(new Date());
 
   return (
-    <section className="mt-[3.2rem] space-y-10 bg-[#031C29] py-[2.4rem] text-[1.6rem] text-[#E5E7E8]">
+    <section className="bg-primary-950 text-light mt-[3.2rem] space-y-10 py-[2.4rem] text-[1.6rem]">
       <div className="xs:grid-cols-2 mx-auto grid max-w-[144rem] grid-cols-1 gap-[4.8rem] px-[3rem] lg:grid-cols-5">
         <div className="xs:col-span-2 space-y-4">
           <Logo />
           <p className="">{`این سایت با هدف آشنایی بیشتر با امام زمان (عج) و جمع‌آوری مطالب مفید و کوتاه، توسط یک دوست‌دار اهل بیت (ع) ایجاد شده است.`}</p>
         </div>
         <div className="space-y-4">
-          <h3 className="font-bold text-[#0E8F91]">دسترسی سریع</h3>
+          <h3 className="text-accent font-bold">دسترسی سریع</h3>
           <ul className="flex flex-col gap-2">
             <li className={navItemClass}>
               <Link href={'#'}>خانه</Link>
@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="font-bold text-[#0E8F91]">لینک‌های مفید</h3>
+          <h3 className="text-accent font-bold">لینک‌های مفید</h3>
           <ul className="flex flex-col gap-2">
             <li className={navItemClass}>
               <Link href={'#'}>مؤسسه‌های معتبر</Link>
@@ -50,7 +50,7 @@ const Footer = () => {
           <h3 className="">اللهم عجل لولیک الفرج</h3>
         </div>
       </div>
-      <div className="h-[1px] w-full max-w-[144rem] bg-gradient-to-r from-transparent via-[#0E8F91] to-transparent" />
+      <div className="via-accent h-[1px] w-full max-w-[144rem] bg-gradient-to-r from-transparent to-transparent" />
       <div className="max-w-[144rem] px-[3rem]">
         <p className=""> &copy;{` ${year} - مهدی قائم، همه حقوق محفوظ است.`}</p>
       </div>

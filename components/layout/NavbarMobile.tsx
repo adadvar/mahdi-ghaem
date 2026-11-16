@@ -12,10 +12,10 @@ const Navbar = ({
   setOpen: (open: boolean) => void;
 }) => {
   const navItemClass =
-    'border-b-2 py-3 border-b-transparent hover:border-[#E5E7E8] duration-500 transition-colors';
+    'border-b-2 py-3 border-b-transparent hover:border-border duration-500 transition-colors';
   return (
     <section
-      className={`${className} fixed inset-0 flex flex-col items-center justify-center gap-3 bg-[#062A3A]/95 px-[3rem] py-[2rem] text-[#E5E7E8] transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
+      className={`${className} bg-primary-900/95 text-light fixed inset-0 flex flex-col items-center justify-center gap-3 px-[3rem] py-[2rem] transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
       <button className="absolute top-15 left-12" onClick={() => setOpen(false)}>
         <BsX className="h-[3rem] w-[3rem]" />
       </button>

@@ -17,7 +17,7 @@ const Card = ({ item }: { item: Item }) => {
   return (
     <Link
       href={`#`}
-      className="group flex min-h-[30rem] min-w-[30rem] flex-1 flex-col rounded-[1rem] border border-[#E5E7E8] bg-white shadow-md transition-all hover:bg-gray-50">
+      className="group border-border flex min-h-[30rem] min-w-[30rem] flex-1 flex-col rounded-[1rem] border bg-white shadow-md transition-all hover:bg-gray-50">
       <div className="relative w-full shrink-0 overflow-hidden rounded-t-[1rem]">
         <Image
           src={item.img}
@@ -29,15 +29,15 @@ const Card = ({ item }: { item: Item }) => {
       </div>
       <div className="flex min-h-0 flex-1 flex-col justify-between gap-[.8rem] p-[1.2rem]">
         <span
-          className="w-fit rounded-[.5rem] px-4 text-[1.2rem] text-[#E5E7E8]"
+          className="text-light w-fit rounded-[.5rem] px-4 text-[1.2rem]"
           style={{ background: item.tagColor }}>
           {item.tag}
         </span>
-        <h3 className="text-start text-[1.6rem] font-bold text-[#062A3A]">{item.title}</h3>
-        <p className="line-clamp-2 text-[1.2rem] text-[#6B7A80]">{item.subTitle}</p>
+        <h3 className="text-primary-900 text-start text-[1.6rem] font-bold">{item.title}</h3>
+        <p className="text-muted line-clamp-2 text-[1.2rem]">{item.subTitle}</p>
         <div className="mt-auto flex w-full items-center justify-between px-[1.2rem]">
-          <span className="text-[1.2rem] text-[#6B7A80]">{en2fa(item.date)}</span>
-          <span className="flex items-center text-[1.2rem] text-[#6B7A80]">
+          <span className="text-muted text-[1.2rem]">{en2fa(item.date)}</span>
+          <span className="text-muted flex items-center text-[1.2rem]">
             <BsClockHistory className="me-2" />
             <span>{`${en2fa(item.studyMin)} دقیقه مطالعه`}</span>
           </span>
@@ -84,16 +84,16 @@ const LatestArticles = () => {
     <section className="mx-auto max-w-[144rem] bg-white py-[2.4rem]">
       <div className="mx-auto flex flex-col items-center justify-center px-[3rem] sm:flex-row sm:justify-between">
         <div>
-          <h2 className="text-center text-[3rem] font-bold text-[#172B36] sm:text-start">
+          <h2 className="text-primary-800 text-center text-[3rem] font-bold sm:text-start">
             آخرین مطالب
           </h2>
-          <p className="text-[1.6rem] text-[#6B7A80]">
+          <p className="text-muted text-[1.6rem]">
             مطالب کوتاه و مفید برای آشنایی بیشتر با امام زمان (عج)
           </p>
         </div>
         <Link
           href={'#'}
-          className="group flex items-center text-[1.4rem] text-blue-800 hover:underline">
+          className="group text-brand-blue flex items-center text-[1.4rem] hover:underline">
           <span className="me-2">مشاهده همه</span>
           <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />
         </Link>

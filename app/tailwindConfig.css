@@ -1,3 +1,21 @@
 @theme {
   --breakpoint-xs: 30rem;
+
+  --color-primary-950: #031c29;
+  --color-primary-900: #062a3a;
+  --color-primary-800: #172b36;
+  --color-surface: #ffffff;
+  --color-border: #e5e7e8;
+  --color-light: #e5e7e8;
+  --color-muted: #6b7a80;
+  --color-gold: #d6a84f;
+  --color-accent: #0e8f91;
+  --color-accent-hover: #2ba6a4;
+  --color-success: #006647;
+  --color-brand-blue: #02389c;
+  --color-brand-purple: #6600aa;
+  --color-danger: #b91515;
+  --color-gold-soft: #e0ac00;
+  --color-brand-green: #007451;
+  --color-brand-indigo: #001dc2;
 }

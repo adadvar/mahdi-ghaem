@@ -28,19 +28,19 @@ const Hadith = () => {
 
       {/* 2. GRADIENT OVERLAY LAYER */}
       <div className="absolute inset-0 px-[3rem]">
-        <div className="h-full w-full rounded-[1rem] md:bg-linear-to-r md:from-[#031C29] md:via-[#031C29]/90 md:to-transparent" />
+        <div className="md:from-primary-950 md:via-primary-950/90 h-full w-full rounded-[1rem] md:bg-linear-to-r md:to-transparent" />
       </div>
 
       {/* 3. TEXT LAYER */}
       <div className="relative z-10 flex h-full flex-col justify-center px-[6rem] md:w-3/5">
         {/* Author Section */}
         <div className="mb-4 flex items-center gap-3">
-          <BsQuote className="h-[2.5rem] w-[2.5rem] shrink-0 text-[#D6A84F]" />
-          <h3 className="text-[1.8rem] font-bold text-[#D6A84F]">امام علی (ع)</h3>
+          <BsQuote className="text-gold h-[2.5rem] w-[2.5rem] shrink-0" />
+          <h3 className="text-gold text-[1.8rem] font-bold">امام علی (ع)</h3>
         </div>
 
         {/* Quote Text */}
-        <p className="text-[1.6rem] leading-relaxed text-[#E5E7E8]">
+        <p className="text-light text-[1.6rem] leading-relaxed">
           {`«بدانید که صبرکنندگان بر اذیت و آزار و تکذیب دشمنان در زمان غیبت قائم، مانند مجاهدانی
           هستند که در رکاب پیامبر (صلی الله علیه وآله) با شمشیر پیکار می‌کنند.»`}
         </p>

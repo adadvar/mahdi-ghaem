@@ -16,19 +16,17 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative flex w-full flex-col items-center justify-center px-[3rem] sm:max-w-[40rem]">
-        <span className={`${quran.className} text-[2.4rem] text-[#D6A84F]`}>
+        <span className={`${quran.className} text-gold text-[2.4rem]`}>
           السَّلامُ عَلَيْكَ يَا بَقِيَّةَ اللَّه
         </span>
         <h1
-          className={`${notoNastaliq.className} flex items-center gap-2 text-[5.2rem] font-bold text-[#E5E7E8]`}>
+          className={`${notoNastaliq.className} text-light flex items-center gap-2 text-[5.2rem] font-bold`}>
           <span className="">امام مهدی</span>
-          <span className="text-[1.4rem] text-[#D6A84F]">{`(عج)`}</span>
+          <span className="text-gold text-[1.4rem]">{`(عج)`}</span>
         </h1>
-        <span className="mt-10 text-[1.6rem] text-[#E5E7E8]">
-          حضرت مهدی، فرزند امام حسن عسکری (ع)
-        </span>
-        <span className="text-[1.4rem] text-[#E5E7E8]">دوازدهمین امام شیعیان</span>
-        <button className="group mt-5 flex items-center justify-center rounded-full bg-[#0E8F91] px-[2rem] py-[1rem] text-[1.4rem] text-[#E5E7E8] transition-colors hover:bg-[#2BA6A4]">
+        <span className="text-light mt-10 text-[1.6rem]">حضرت مهدی، فرزند امام حسن عسکری (ع)</span>
+        <span className="text-light text-[1.4rem]">دوازدهمین امام شیعیان</span>
+        <button className="group bg-accent text-light hover:bg-accent-hover mt-5 flex items-center justify-center rounded-full px-[2rem] py-[1rem] text-[1.4rem] transition-colors">
           <span className="me-2">مطالعه را شروع کنید</span>
           <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />
         </button>
