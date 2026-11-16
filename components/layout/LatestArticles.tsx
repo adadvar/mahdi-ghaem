@@ -1,13 +1,10 @@
 import Link from 'next/link';
 import { BsArrowLeft, BsClockHistory } from 'react-icons/bs';
-import art1 from '@/public/img/art1.png';
-import art2 from '@/public/img/art2.png';
-import art3 from '@/public/img/art3.png';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { en2fa } from '@/lib/utils';
 
 interface Item {
-  img: StaticImageData;
+  img: string;
   tag: string;
   tagColor: string;
   title: string;
@@ -24,6 +21,8 @@ const Card = ({ item }: { item: Item }) => {
       <div className="relative w-full shrink-0 overflow-hidden rounded-t-[1rem]">
         <Image
           src={item.img}
+          width={800}
+          height={600}
           className="h-[15rem] w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
           alt={item.title}
         />
@@ -50,7 +49,7 @@ const Card = ({ item }: { item: Item }) => {
 
 const items: Item[] = [
   {
-    img: art1,
+    img: '/img/art1.png',
     tag: 'ولادت',
     tagColor: '#006647',
     title: 'امام زمان چندمین امام است؟',
@@ -59,7 +58,7 @@ const items: Item[] = [
     studyMin: '5'
   },
   {
-    img: art2,
+    img: '/img/art2.png',
     tag: 'غیبت',
     tagColor: '#02389c',
     title: 'غیبت صغری چه بود؟',
@@ -69,7 +68,7 @@ const items: Item[] = [
     studyMin: '5'
   },
   {
-    img: art3,
+    img: '/img/art3.png',
     tag: 'احادیث',
     tagColor: '#6600aa',
     title: 'چرا امام زمان غیبت کردند؟',
